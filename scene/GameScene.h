@@ -103,6 +103,7 @@ private: // メンバ変数
 	std::unique_ptr<Model> modelGround_;
 	// 自キャラの3Dモデル
 	std::unique_ptr<Model> modelFighterBody_;
+	std::unique_ptr<Model> modelFighterHead_;
 	std::unique_ptr<Model> modelFighterL_arm_;
 	std::unique_ptr<Model> modelFighterR_arm_;
 
