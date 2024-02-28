@@ -26,7 +26,10 @@ void GameScene::Initialize() {
 	AxisIndicator::GetInstance()->SetTargetViewProjection(&debugCamera_->GetViewProjection());
 
 	uint32_t fadeTexHandle = TextureManager::Load("fade.png");
+	UiHandle_ = TextureManager::Load("setumei.png");
+
 	fadeSprite_ = Sprite::Create(fadeTexHandle, {0, 0});
+	UiSprite_ = Sprite::Create(UiHandle_, {0, 0});
 
 	// 自機の体の3Dモデルの生成
 	modelFighterBody_.reset(Model::CreateFromOBJ("Player", true));
@@ -183,6 +186,7 @@ void GameScene::Draw() {
 	/// </summary>
 
 	// sprite_->Draw();
+	
 
 	// スプライト描画後処理
 	Sprite::PostDraw();
@@ -230,9 +234,9 @@ void GameScene::Draw() {
 	/// <summary>
 	/// ここに前景スプライトの描画処理を追加できる
 	/// </summary>
-
+	UiSprite_->Draw();
 	fadeSprite_->Draw();
-
+	
 	// スプライト描画後処理
 	Sprite::PostDraw();
 

@@ -91,9 +91,11 @@ private: // メンバ変数
 	// テクスチャハンドル
 	uint32_t textureHandle_ = 0;
 
+	uint32_t UiHandle_ = 0;
 	// スプライト
 	Sprite* fadeSprite_ = nullptr;
 	Vector4 fadeColor_ = {1.0f, 1.0f, 1.0f, 1.0f};
+	Sprite* UiSprite_ = nullptr;
 
 	// 自キャラの3Dモデル
 	std::unique_ptr<Model> modelPlayer_;
